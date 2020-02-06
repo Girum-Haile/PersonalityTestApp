@@ -6,11 +6,11 @@ void main(){
 
 }
 class MyApp extends StatelessWidget {
-
  Widget build(BuildContext context){
-   return MaterialApp(home: Text('hello world!'),);
+   return MaterialApp(home: Scaffold(
+     appBar:AppBar(title:Text('my first app'),),
+     body:Text('my first app'),
+     ),);
 
   }
-
-
 }
