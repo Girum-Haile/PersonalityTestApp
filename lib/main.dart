@@ -6,11 +6,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   var questionIndex = 0;
-  
+
   answerQuestion(){
     questionIndex = questionIndex + 1;
     print(questionIndex); 
   }
+
   @override
   Widget build(BuildContext context) {
     var question = [
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       "What's your favourite music gener"
     ];
     return MaterialApp(
-      home: Scaffold(
+      home: Scaffold( // responsible for creating basic paged design
           appBar: AppBar(
             title: Text('my first app'),
           ),
