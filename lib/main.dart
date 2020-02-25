@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './question.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,21 +9,20 @@ class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return MyAppState();
+    return _MyAppState();
   }
-
 }
-class MyAppState extends State<MyApp>{
 
-  var questionIndex = 0;
+class _MyAppState extends State<MyApp> {
+  var _questionIndex = 0;
 
-  void answerQuestion(){
+  void _answerQuestion() {
     setState(() {
-       questionIndex = questionIndex + 1;
-      
+      // a function that forces flutter to re-render UI
+      _questionIndex = _questionIndex + 1;
     });
-   
-    print(questionIndex); 
+
+    print(_questionIndex);
   }
 
   @override
@@ -32,24 +32,25 @@ class MyAppState extends State<MyApp>{
       "What's your favourite music gener"
     ];
     return MaterialApp(
-      home: Scaffold( // responsible for creating basic paged design
+      home: Scaffold(
+          // responsible for creating basic paged design
           appBar: AppBar(
             title: Text('my first app'),
           ),
           body: Column(
             children: [
-              Text(question[questionIndex]),
+              Question(question[_questionIndex]),
               RaisedButton(
                 child: Text('answer 1'),
-                onPressed:answerQuestion,
+                onPressed: _answerQuestion,
               ),
               RaisedButton(
                 child: Text('Answer 2'),
-                onPressed: answerQuestion,
+                onPressed: _answerQuestion,
               ),
               RaisedButton(
                 child: Text('Answer 3'),
-                onPressed: answerQuestion,
+                onPressed: _answerQuestion,
               ),
             ],
           )),
