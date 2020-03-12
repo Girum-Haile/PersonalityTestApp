@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
+    
     return _MyAppState();
   }
 }
@@ -17,11 +17,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _question = const [
     {
-      'questionText': "What's your favourite animal?",
+      'questionText': "What's your favourite pet animal?",
       'answer': [
         {'text': 'dog', 'score': 10},
         {'text': 'cat', 'score': 6},
-        {'text': 'rabbit', 'score': 4},
+        {'text': 'cow', 'score': 4},
         {'text': 'sheep', 'score': 2}
       ]
     },
